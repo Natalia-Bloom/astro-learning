@@ -1,0 +1,32 @@
+/*
+ ╭──────────── · · ୨୧ · · ────────────╮
+	Global
+╰──────────── · · ୨୧ · · ────────────╯
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+	outline: .2em dashed currentColor;
+	outline-offset: .2em;
+}
+
+html {
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
