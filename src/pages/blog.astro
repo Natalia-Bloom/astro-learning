@@ -1,36 +1,17 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = 'My Astro Learning Blog';
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{ pageTitle } | Astro Basics</title>
-	</head>
-	
-	<body>
-		<a href="/">Home</a>
-		
-		<a href="/about/">About</a>
 
-		<a href="/blog/">Blog</a>
+<BaseLayout title={ pageTitle }>
+	<p>This is where I will post about my journey learning Astro.</p>
 
-		 <h1>{ pageTitle }</h1>
+	<ul aria-label="Posts">
+		<li><a href="/posts/post-1/">Post 1</a></li>
 
-		<p>This is where I will post about my journey learning Astro.</p>
+		<li><a href="/posts/post-2/">Post 2</a></li>
 
-		<ul aria-label="Posts">
-			<li><a href="/posts/post-1/">Post 1</a></li>
-
-			<li><a href="/posts/post-2/">Post 2</a></li>
-
-			<li><a href="/posts/post-3/">Post 3</a></li>
-		</ul>
-	</body>
-</html>
-
+		<li><a href="/posts/post-3/">Post 3</a></li>
+	</ul>
+</BaseLayout>
