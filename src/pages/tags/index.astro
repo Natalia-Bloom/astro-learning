@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = 'Tags Archive';
+const posts = Object.values( import.meta.glob( '../posts/*.md', { eager: true } ) );
+const tags = [...new Set(posts.map((post: any) => post.frontmatter.tags).flat())];
+---
+
+<BaseLayout pageTitle={ title }>
+	<ul class="tags" aria-label="Tags">
+		{ tags.map( tag => (
+			<li class="tag">
+				<a href={ '/tags/' + tag }>
+					{ tag }
+				</a>
+			</li>
+		) ) }
+	</ul>
+</BaseLayout>
