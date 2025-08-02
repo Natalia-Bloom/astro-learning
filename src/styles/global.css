@@ -18,6 +18,15 @@ html {
 	font-family: sans-serif;
 }
 
+html.dark {
+	background-color: #0d0950;
+	color: #fff;
+}
+
+.dark .nav-links a {
+	color: #fff;
+}
+
 body {
 	margin: 0 auto;
 	width: 100%;
@@ -92,6 +101,17 @@ nav a:focus-visible {
 .tag a {
 	color: #00539F;
 }
+
+.btn-theme {
+	border: 0;
+	background: none;
+	cursor: pointer;
+}
+.sun { fill: black; }
+.moon { fill: transparent; }
+
+:global(.dark) .sun { fill: transparent; }
+:global(.dark) .moon { fill: white; }
 
 @media screen and (min-width: 636px) {
 	nav {
